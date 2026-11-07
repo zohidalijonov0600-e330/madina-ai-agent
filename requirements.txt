@@ -1,50 +1,7 @@
-# Madina AI Agent
-
-Madina is a Telegram AI assistant built with Python. It supports text chats, voice messages, OpenRouter Gemini AI, STT, TTS, and SQLite-based memory.
-
-## Quick start
-
-1. Create a virtual environment
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate
-   ```
-
-2. Install requirements
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Copy environment variables
-   ```bash
-   cp .env.example .env
-   ```
-
-4. Fill in real values in `.env`:
-   - `TELEGRAM_BOT_TOKEN`
-   - `OPENROUTER_API_KEY`
-   - `OWNER_TELEGRAM_ID`
-   - optional: `ALLOWED_TELEGRAM_IDS`
-
-5. Run the bot
-   ```bash
-   python main.py
-   ```
-
-## Commands
-
-- `/start`
-- `/help`
-- `/voice_on`
-- `/voice_off`
-- `/text`
-- `/language uz|ru|en`
-- `/clear`
-- `/status`
-
-## Notes
-
-- Only `OWNER_TELEGRAM_ID` can access the bot by default.
-- Other user IDs can be added with `ALLOWED_TELEGRAM_IDS` later.
-- FFmpeg must be installed for voice conversion.
-- Use Linux/macOS: `apt-get install ffmpeg` or `brew install ffmpeg`.
+python-telegram-bot>=20.8
+requests>=2.31.0
+httpx>=0.27.0
+python-dotenv>=1.0.1
+sqlalchemy>=2.0.30
+aiosqlite>=0.20.0
+pytest>=8.0.0
